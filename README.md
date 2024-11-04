@@ -12,23 +12,6 @@
 >José Pedro Morgado
 >
 
-<style>
-  .colaborador {
-    font-weight: bold;
-  }
-  .leticia {
-    color: pink;
-  }
-  .jose {
-    color: blue;
-  }
-</style>
-
-**Colaboradores:**
-
-<span class="leticia colaborador">Letícia Bertoldi</span>  
-<span class="jose colaborador">José Pedro Morgado</span>
-
 
 ---
 # Camada bronze:
