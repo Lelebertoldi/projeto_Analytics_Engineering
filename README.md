@@ -12,11 +12,22 @@
 >José Pedro Morgado
 >
 
-**Colaboradores:**  
+<style>
+  .colaborador {
+    font-weight: bold;
+  }
+  .leticia {
+    color: pink;
+  }
+  .jose {
+    color: blue;
+  }
+</style>
 
-<font color="pink"><strong>Letícia Bertoldi</strong></font>  
-<font color="blue"><strong>José Pedro Morgado</strong></font>
+**Colaboradores:**
 
+<span class="leticia colaborador">Letícia Bertoldi</span>  
+<span class="jose colaborador">José Pedro Morgado</span>
 
 
 ---
