@@ -5,7 +5,7 @@
 
 > [!NOTE]
 >
->**Colaboradores:**
+>[![Colaboradores]
 >
 >Letícia Bertoldi
 >
