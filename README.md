@@ -1,27 +1,19 @@
-# Documentação
+<img width=80% src="https://capsule-render.vercel.app/api?type=waving&color=0:00BFFF,50:6A5ACD,100:800080&text=Documentação&fontSize=70&height=180&section=header"/>
 
 ## Projeto ADA: Engenharia de Dados e Garantia de Qualidade no Conjunto de Dados do Airbnb no Rio de Janeiro
-
-<div style="background-color: #ffcc00; padding: 10px; border-radius: 5px;">
-  <strong>Colaboradores:</strong>
-  <span style="color: pink;">Letícia Bertoldi</span>
-  <span style="color: blue;">José Pedro Morgado</span>
-</div>
-
-
-
-
 
 
 > [!NOTE]
 >
 >**Colaboradores:**
 >
-><span style="color: pink;">Letícia Bertoldi</span>
+>Letícia Bertoldi
 >
-><span style="color: blue;">José Pedro Morgado</span>
+>José Pedro Morgado
 >
->
+
+Este texto é <span style="color: #FF5733;">laranja</span> usando cor hexadecimal.
+
 
 ---
 # Camada bronze:
