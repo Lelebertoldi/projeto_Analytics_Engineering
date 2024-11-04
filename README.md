@@ -12,7 +12,11 @@
 >José Pedro Morgado
 >
 
-Este texto é <span style="color: #FF5733;">laranja</span> usando cor hexadecimal.
+**Colaboradores:**  
+
+<font color="pink"><strong>Letícia Bertoldi</strong></font>  
+<font color="blue"><strong>José Pedro Morgado</strong></font>
+
 
 
 ---
