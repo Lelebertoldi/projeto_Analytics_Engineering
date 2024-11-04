@@ -1,14 +1,16 @@
 # Documentação
 
-## Projeto: Engenharia de Dados e Garantia de Qualidade no Conjunto de Dados do Airbnb no Rio de Janeiro
+## Projeto ADA: Engenharia de Dados e Garantia de Qualidade no Conjunto de Dados do Airbnb no Rio de Janeiro
 
-> [!Colaboradores:]
+> [!NOTE]
+>
+>Colaboradores:
 >
 >Letícia Bertoldi
 >José Pedro Morgado
 >
 
-
+---
 # Camada bronze:
 
 1. Download e unzip dos arquivos CSV - calendar, listings e reviews - referente a cidade do Rio de Janeiro
@@ -24,3 +26,4 @@
 2. Transformação do arquivo CSV para parquet para melhor performance
 3. Verificação dos arquivos 
 
+---
