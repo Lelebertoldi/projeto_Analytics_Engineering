@@ -4,11 +4,12 @@
 
 > [!NOTE]
 >
->Colaboradores:
+>**Colaboradores:**
 >
->Letícia Bertoldi
+><span style="color: pink;">Letícia Bertoldi</span>
 >
->José Pedro Morgado
+><span style="color: blue;">José Pedro Morgado</span>
+>
 >
 
 ---
