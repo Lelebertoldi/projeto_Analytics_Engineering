@@ -5,7 +5,7 @@
 
 > [!NOTE]
 >
->![Colaboradores](https://img.shields.io/badge/Colaboradores-000?style=flat&logo=people&logoColor=white)
+>![Colaboradores](https://img.shields.io/badge/Colaboradores-007BFF?style=flat&logo=people&logoColor=white)
 >
 >Letícia Bertoldi
 >
