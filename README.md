@@ -2,6 +2,17 @@
 
 ## Projeto ADA: Engenharia de Dados e Garantia de Qualidade no Conjunto de Dados do Airbnb no Rio de Janeiro
 
+<div style="background-color: #ffcc00; padding: 10px; border-radius: 5px;">
+  <strong>Colaboradores:</strong>
+  <span style="color: pink;">Letícia Bertoldi</span>
+  <span style="color: blue;">José Pedro Morgado</span>
+</div>
+
+
+
+
+
+
 > [!NOTE]
 >
 >**Colaboradores:**
