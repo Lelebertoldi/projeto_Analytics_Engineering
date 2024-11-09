@@ -1,0 +1,372 @@
+version: 2
+
+models:
+
+  - name: calendar
+    description: "Tabela calendar no banco bronze"
+    columns:
+      - name: listing_id
+        description: "ID único para cada listagem"
+        tests:
+          - dbt_utils.type_integer
+      - name: date
+        description: "A data no calendário da listagem"
+        tests:
+          - dbt_utils.type_datetime
+      - name: available
+        description: "Indica se a listagem está disponível"
+        tests:
+          - dbt_utils.type_boolean
+      - name: price
+        description: "Preço da listagem"
+        tests:
+          - dbt_utils.type_double
+      - name: adjusted_price
+        description: "Preço ajustado da listagem (se houver)"
+        tests:
+          - dbt_utils.type_double
+      - name: minimum_nights
+        description: "Número mínimo de noites para a reserva"
+        tests:
+          - dbt_utils.type_integer
+      - name: maximum_nights
+        description: "Número máximo de noites para a reserva"
+        tests:
+          - dbt_utils.type_integer
+
+
+
+  - name: reviews
+    description: "Tabela reviews no banco bronze"
+    columns:
+      - name: listing_id
+        description: "ID único da listagem associada à avaliação"
+        tests:
+          - dbt_utils.type_integer
+      - name: id
+        description: "ID único da avaliação"
+        tests:
+          - dbt_utils.type_integer
+      - name: date
+        description: "Data em que a avaliação foi feita"
+        tests:
+          - dbt_utils.type_datetime
+      - name: reviewer_id
+        description: "ID do revisor"
+        tests:
+          - dbt_utils.type_bigint
+      - name: reviewer_name
+        description: "Nome do revisor"
+        tests:
+          - dbt_utils.type_varchar
+      - name: comments
+        description: "Comentários feitos pelo revisor"
+        tests:
+          - dbt_utils.type_varchar
+
+
+
+  - name: listings
+    description: "Tabela listings no banco bronze"
+    columns:
+      - name: id
+        description: "ID único do anúncio"
+        tests:
+          - dbt_utils.type_integer
+      - name: listing_url
+        description: "URL do anúncio"
+        tests:
+          - dbt_utils.type_varchar
+      - name: scrape_id
+        description: "ID de rastreamento do anúncio"
+        tests:
+          - dbt_utils.type_bigint
+      - name: last_scraped
+        description: "Data da última raspagem"
+        tests:
+          - dbt_utils.type_datetime
+      - name: source
+        description: "Fonte de onde o anúncio foi retirado"
+        tests:
+          - dbt_utils.type_varchar
+      - name: name
+        description: "Nome do anúncio"
+        tests:
+          - dbt_utils.type_varchar
+      - name: description
+        description: "Descrição do anúncio"
+        tests:
+          - dbt_utils.type_varchar
+      - name: neighborhood_overview
+        description: "Visão geral do bairro"
+        tests:
+          - dbt_utils.type_varchar
+      - name: picture_url
+        description: "URL da imagem do anúncio"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_id
+        description: "ID do anfitrião"
+        tests:
+          - dbt_utils.type_integer
+      - name: host_url
+        description: "URL do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_name
+        description: "Nome do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_since
+        description: "Data de início do anfitrião"
+        tests:
+          - dbt_utils.type_date
+      - name: host_location
+        description: "Localização do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_about
+        description: "Sobre o anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_response_time
+        description: "Tempo de resposta do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_response_rate
+        description: "Taxa de resposta do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_acceptance_rate
+        description: "Taxa de aceitação do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_is_superhost
+        description: "Indica se o anfitrião é um superanfitrião"
+        tests:
+          - dbt_utils.type_boolean
+      - name: host_thumbnail_url
+        description: "URL da miniatura do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_picture_url
+        description: "URL da foto do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_neighbourhood
+        description: "Vizinhança do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_listings_count
+        description: "Número de listagens do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_total_listings_count
+        description: "Número total de listagens do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_verifications
+        description: "Verificações do anfitrião"
+        tests:
+          - dbt_utils.type_varchar
+      - name: host_has_profile_pic
+        description: "Indica se o anfitrião tem foto de perfil"
+        tests:
+          - dbt_utils.type_boolean
+      - name: host_identity_verified
+        description: "Indica se a identidade do anfitrião foi verificada"
+        tests:
+          - dbt_utils.type_boolean
+      - name: neighbourhood
+        description: "Bairro do anúncio"
+        tests:
+          - dbt_utils.type_varchar
+      - name: neighbourhood_cleansed
+        description: "Bairro do anúncio (limpo)"
+        tests:
+          - dbt_utils.type_varchar
+      - name: neighbourhood_group_cleansed
+        description: "Grupo de bairros (limpo)"
+        tests:
+          - dbt_utils.type_varchar
+      - name: latitude
+        description: "Latitude do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: longitude
+        description: "Longitude do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: property_type
+        description: "Tipo de propriedade do anúncio"
+        tests:
+          - dbt_utils.type_varchar
+      - name: room_type
+        description: "Tipo de quarto do anúncio"
+        tests:
+          - dbt_utils.type_varchar
+      - name: accommodates
+        description: "Número de pessoas que o anúncio acomoda"
+        tests:
+          - dbt_utils.type_integer
+      - name: bathrooms
+        description: "Número de banheiros"
+        tests:
+          - dbt_utils.type_double
+      - name: bathrooms_text
+        description: "Texto descrevendo os banheiros"
+        tests:
+          - dbt_utils.type_varchar
+      - name: bedrooms
+        description: "Número de quartos"
+        tests:
+          - dbt_utils.type_integer
+      - name: beds
+        description: "Número de camas"
+        tests:
+          - dbt_utils.type_integer
+      - name: amenities
+        description: "Amenidades do anúncio"
+        tests:
+          - dbt_utils.type_json
+      - name: price
+        description: "Preço do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: minimum_nights
+        description: "Número mínimo de noites"
+        tests:
+          - dbt_utils.type_integer
+      - name: maximum_nights
+        description: "Número máximo de noites"
+        tests:
+          - dbt_utils.type_integer
+      - name: minimum_minimum_nights
+        description: "Mínimo de noites mínimas"
+        tests:
+          - dbt_utils.type_integer
+      - name: maximum_minimum_nights
+        description: "Máximo de noites mínimas"
+        tests:
+          - dbt_utils.type_integer
+      - name: minimum_maximum_nights
+        description: "Mínimo de noites máximas"
+        tests:
+          - dbt_utils.type_integer
+      - name: maximum_maximum_nights
+        description: "Máximo de noites máximas"
+        tests:
+          - dbt_utils.type_integer
+      - name: minimum_nights_avg_ntm
+        description: "Média de noites mínimas"
+        tests:
+          - dbt_utils.type_double
+      - name: maximum_nights_avg_ntm
+        description: "Média de noites máximas"
+        tests:
+          - dbt_utils.type_double
+      - name: calendar_updated
+        description: "Data de atualização do calendário"
+        tests:
+          - dbt_utils.type_date
+      - name: has_availability
+        description: "Indica se o anúncio está disponível"
+        tests:
+          - dbt_utils.type_boolean
+      - name: availability_30
+        description: "Disponibilidade nos próximos 30 dias"
+        tests:
+          - dbt_utils.type_integer
+      - name: availability_60
+        description: "Disponibilidade nos próximos 60 dias"
+        tests:
+          - dbt_utils.type_integer
+      - name: availability_90
+        description: "Disponibilidade nos próximos 90 dias"
+        tests:
+          - dbt_utils.type_integer
+      - name: availability_365
+        description: "Disponibilidade nos próximos 365 dias"
+        tests:
+          - dbt_utils.type_integer
+      - name: calendar_last_scraped
+        description: "Data da última raspagem do calendário"
+        tests:
+          - dbt_utils.type_date
+      - name: number_of_reviews
+        description: "Número total de avaliações"
+        tests:
+          - dbt_utils.type_integer
+      - name: number_of_reviews_ltm
+        description: "Número de avaliações nos últimos 12 meses"
+        tests:
+          - dbt_utils.type_integer
+      - name: number_of_reviews_l30d
+        description: "Número de avaliações nos últimos 30 dias"
+        tests:
+          - dbt_utils.type_integer
+      - name: first_review
+        description: "Data da primeira avaliação"
+        tests:
+          - dbt_utils.type_date
+      - name: last_review
+        description: "Data da última avaliação"
+        tests:
+          - dbt_utils.type_date
+      - name: review_scores_rating
+        description: "Avaliação geral do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: review_scores_accuracy
+        description: "Avaliação de precisão do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: review_scores_cleanliness
+        description: "Avaliação de limpeza do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: review_scores_checkin
+        description: "Avaliação de check-in do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: review_scores_communication
+        description: "Avaliação de comunicação do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: review_scores_location
+        description: "Avaliação de localização do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: review_scores_value
+        description: "Avaliação de valor do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: license
+        description: "Licença do anúncio"
+        tests:
+          - dbt_utils.type_varchar
+      - name: instant_bookable
+        description: "Indica se o anúncio é instantaneamente reservável"
+        tests:
+          - dbt_utils.type_boolean
+      - name: calculated_host_listings_count
+        description: "Número de listagens calculado"
+        tests:
+          - dbt_utils.type_integer
+      - name: calculated_host_listings_count_entire_homes
+        description: ""
+        tests:
+          - dbt_utils.type_integer
+      - name: calculated_host_listings_count_private_rooms
+        description: ""
+        tests:
+          - dbt_utils.type_integer
+      - name: calculated_host_listings_count_shared_rooms
+        description: ""
+        tests:
+          - dbt_utils.type_integer
+      - name: reviews_per_month
+        description: ""
+        tests:
+          - dbt_utils.type_numeric
+

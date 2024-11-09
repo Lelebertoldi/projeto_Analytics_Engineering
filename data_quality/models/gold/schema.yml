@@ -1,0 +1,105 @@
+version: 2
+
+models:
+  - name: demanda_por_bairro
+    description: "Tabela que organiza a demanda mensal de reservas e métricas de avaliação por bairro."
+    columns:
+      - name: bairro
+        description: "Nome do bairro principal para as métricas de demanda e avaliação."
+        tests:
+          - not_null
+          - unique
+          - dbt_utils.type_varchar
+
+      - name: demanda_jan
+        description: "Quantidade de reservas no bairro em janeiro."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_fev
+        description: "Quantidade de reservas no bairro em fevereiro."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_mar
+        description: "Quantidade de reservas no bairro em março."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_abr
+        description: "Quantidade de reservas no bairro em abril."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_mai
+        description: "Quantidade de reservas no bairro em maio."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_jun
+        description: "Quantidade de reservas no bairro em junho."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_jul
+        description: "Quantidade de reservas no bairro em julho."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_ago
+        description: "Quantidade de reservas no bairro em agosto."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_set
+        description: "Quantidade de reservas no bairro em setembro."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_out
+        description: "Quantidade de reservas no bairro em outubro."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_nov
+        description: "Quantidade de reservas no bairro em novembro."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: demanda_dez
+        description: "Quantidade de reservas no bairro em dezembro."
+        tests:
+          - not_null
+          - dbt_utils.type_integer
+
+      - name: media_preco
+        description: "Média dos preços das reservas no bairro."
+        tests:
+          - dbt_utils.type_double
+          - not_null
+          - accepted_range: {min: 0}
+
+      - name: quantidade_avaliacoes
+        description: "Número total de avaliações no bairro."
+        tests:
+          - dbt_utils.type_integer
+          - not_null
+          - accepted_values: [0]
+
+      - name: media_avaliacoes
+        description: "Média das avaliações dos anúncios no bairro."
+        tests:
+          - dbt_utils.type_double
+          - not_null
+          - accepted_range: {min: 0, max: 5}  # Média de avaliação dentro do limite de 0 a 5.

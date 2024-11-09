@@ -1,0 +1,22 @@
+data_quality:
+  target: bronze_target
+  outputs:
+    bronze_target:
+      type: duckdb
+      path: "D:\\GitHub\\projeto_Analytics_Engineering\\data_quality\\bronze.duckdb"
+      extensions: []
+      
+    silver_1_target:
+      type: duckdb
+      path: "D:\\GitHub\\projeto_Analytics_Engineering\\data_quality\\silver_1.duckdb"
+      extensions: []
+
+    silver_2_target:
+      type: duckdb
+      path: "D:\\GitHub\\projeto_Analytics_Engineering\\data_quality\\silver_2.duckdb"
+      extensions: []
+
+    gold_target:
+      type: duckdb
+      path: "D:\\GitHub\\projeto_Analytics_Engineering\\data_quality\\gold.duckdb"
+      extensions: []

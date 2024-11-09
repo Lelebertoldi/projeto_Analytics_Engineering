@@ -1,0 +1,45 @@
+version: 2
+
+models:
+
+  - name: calendar
+    description: "Tabela calendar no banco silver"
+    columns:
+      - name: listing_id
+        description: "ID único para cada listagem"
+        tests:
+          - dbt_utils.type_bigint
+      - name: date
+        description: "A data no calendário da listagem"
+        tests:
+          - dbt_utils.type_datetime
+      - name: available
+        description: "Indica se a listagem está disponível"
+        tests:
+          - dbt_utils.type_boolean
+
+
+
+  - name: listings
+    description: "Tabela listings no banco bronze"
+    columns:
+      - name: id
+        description: "ID único do anúncio"
+        tests:
+          - dbt_utils.type_bigint
+      - name: neighbourhood_cleansed
+        description: "Bairro do anúncio (limpo)"
+        tests:
+          - dbt_utils.type_varchar
+      - name: price
+        description: "Preço do anúncio"
+        tests:
+          - dbt_utils.type_double
+      - name: number_of_reviews
+        description: "Número total de avaliações"
+        tests:
+          - dbt_utils.type_integer
+      - name: review_scores_rating
+        description: "Avaliação geral do anúncio"
+        tests:
+          - dbt_utils.type_double                    
