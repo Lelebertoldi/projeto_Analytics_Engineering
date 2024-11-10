@@ -34,7 +34,7 @@
 
 > [!NOTE]
 >
-> Os bancos de dados bronze.duckdb e silver_1.duckdb foram zipados na pasta 'bancos de dados zipados' para serem >enviados para o GitHub por conta do limite de armazenamento por arquivo
+> Os bancos de dados bronze.duckdb e silver_1.duckdb foram zipados na pasta 'bancos de dados zipados' para serem enviados para o GitHub por conta do limite de armazenamento por arquivo
 >
 
 ---
